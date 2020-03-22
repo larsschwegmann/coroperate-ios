@@ -12,16 +12,19 @@ import Tagged
 struct User: Codable {
     typealias Id = Tagged<User, Int>
 
-    var id: Id
-    
+    var id: Id?
+
     var firstName: String
     var lastName: String
 
-    var lat: Double
-    var long: Double
-    var range: Double
+    var username: String
+    var password: String?
+    var email: String
+    var profile: Profile
+}
 
-    var phone: String
-
-    var verified: Bool
+struct Profile: Codable {
+    var address: String
+    var zipCode: String
+    var city: String
 }

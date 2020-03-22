@@ -2,12 +2,39 @@
   "object": {
     "pins": [
       {
-        "package": "AnyCodable",
-        "repositoryURL": "https://github.com/Flight-School/AnyCodable.git",
+        "package": "Eureka",
+        "repositoryURL": "https://github.com/xmartlabs/Eureka.git",
         "state": {
           "branch": null,
-          "revision": "6e9610258e9f1044b5e0d88545052846448b43c3",
-          "version": "0.2.3"
+          "revision": "567d4e172fa3f50952eb2462cb7a9785403530f2",
+          "version": "5.2.0"
+        }
+      },
+      {
+        "package": "FloatingPanel",
+        "repositoryURL": "https://github.com/SCENEE/FloatingPanel.git",
+        "state": {
+          "branch": null,
+          "revision": "f909cd41016ec28e06965dd270814f412d46312e",
+          "version": "1.7.4"
+        }
+      },
+      {
+        "package": "JJLISO8601DateFormatter",
+        "repositoryURL": "https://github.com/michaeleisel/JJLISO8601DateFormatter",
+        "state": {
+          "branch": null,
+          "revision": "4e3c015c6b2e7ca01d99e183c32b051864784209",
+          "version": "0.1.2"
+        }
+      },
+      {
+        "package": "KeychainAccess",
+        "repositoryURL": "https://github.com/kishikawakatsumi/KeychainAccess.git",
+        "state": {
+          "branch": null,
+          "revision": "b920ad7df3c73189dcdd4aa05c540849b2010dbf",
+          "version": "4.1.0"
         }
       },
       {
@@ -17,6 +44,24 @@
           "branch": null,
           "revision": "592e1eb4255c571ebffc29955011e352217501b4",
           "version": "0.5.0"
+        }
+      },
+      {
+        "package": "ZippyJSON",
+        "repositoryURL": "https://github.com/michaeleisel/ZippyJSON.git",
+        "state": {
+          "branch": null,
+          "revision": "e69224d4c0e8a52d4c95cb7633340663066738d2",
+          "version": "1.1.1"
+        }
+      },
+      {
+        "package": "ZippyJSONCFamily",
+        "repositoryURL": "https://github.com/michaeleisel/ZippyJSONCFamily",
+        "state": {
+          "branch": null,
+          "revision": "c7fa94c7983fa9becc4f8af0e42560d9fc80571f",
+          "version": "1.1.1"
         }
       }
     ]

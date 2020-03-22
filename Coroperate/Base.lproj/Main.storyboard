@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,10 +16,140 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
+                    <connections>
+                        <segue destination="jnk-7f-KyC" kind="relationship" relationship="viewControllers" id="KBm-79-KU8"/>
+                        <segue destination="Jo7-4V-6g3" kind="relationship" relationship="viewControllers" id="vHG-AT-Phg"/>
+                        <segue destination="5kw-6G-PjB" kind="relationship" relationship="viewControllers" id="cap-r7-CUb"/>
+                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-46" y="106"/>
+        </scene>
+        <!--Requests Table View Controller-->
+        <scene sceneID="Xmw-Oe-z9J">
+            <objects>
+                <tableViewController id="EWK-yk-x4O" customClass="RequestsTableViewController" customModule="Coroperate" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="L0J-iF-vCc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="EWK-yk-x4O" id="raI-zm-YyF"/>
+                            <outlet property="delegate" destination="EWK-yk-x4O" id="VoM-rJ-Gue"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="tww-jS-bt3"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vn7-OD-B8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1960.8695652173915" y="236.38392857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8sn-XQ-hdU">
+            <objects>
+                <viewController id="ugY-5i-x8L" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RHp-Rf-JfP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uZu-jW-nSY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C1R-sT-F3R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8B-rJ-gOn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1945" y="996"/>
+        </scene>
+        <!--Meine Einkaufsliste-->
+        <scene sceneID="Ke5-Jg-L6C">
+            <objects>
+                <tableViewController id="pUu-cl-4GQ" customClass="ShoppingListController" customModule="Coroperate" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="SYH-Hy-Zgk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="pUu-cl-4GQ" id="K6P-yA-0f6"/>
+                            <outlet property="delegate" destination="pUu-cl-4GQ" id="1oo-4t-Tcb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Meine Einkaufsliste" id="f1s-w5-fyg">
+                        <barButtonItem key="rightBarButtonItem" title="Bestellen" id="Qbq-hi-Hun">
+                            <connections>
+                                <action selector="requestButtonPressed:" destination="pUu-cl-4GQ" id="KKp-4Y-Cra"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="requestBarButton" destination="Qbq-hi-Hun" id="k2z-Ff-hlC"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="swt-XR-tu3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1944.9275362318842" y="-439.28571428571428"/>
+        </scene>
+        <!--Einkaufsliste-->
+        <scene sceneID="jhG-Gu-Bfm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jnk-7f-KyC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Einkaufsliste" image="cart.fill" catalog="system" springLoaded="YES" id="8er-hz-vwN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RVF-Ru-4nY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pUu-cl-4GQ" kind="relationship" relationship="rootViewController" id="E2Z-3k-rvj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="abO-il-pVU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034.7826086956522" y="-439.28571428571428"/>
+        </scene>
+        <!--Konto-->
+        <scene sceneID="XEp-FN-nbm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5kw-6G-PjB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Konto" image="person.fill" catalog="system" id="KKU-PA-8XG"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7CL-Le-fIs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ugY-5i-x8L" kind="relationship" relationship="rootViewController" id="ZgT-qV-bPn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MNP-XA-ugf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1035" y="996"/>
+        </scene>
+        <!--Bestellungen-->
+        <scene sceneID="R45-s1-GYB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jo7-4V-6g3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bestellungen" image="exclamationmark.bubble.fill" catalog="system" id="qII-mM-vBX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pYK-Ci-WDx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EWK-yk-x4O" kind="relationship" relationship="rootViewController" id="bA1-ye-nsF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WC2-aa-3jB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="236.38392857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cart.fill" catalog="system" width="64" height="50"/>
+        <image name="exclamationmark.bubble.fill" catalog="system" width="64" height="54"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
+    </resources>
 </document>
